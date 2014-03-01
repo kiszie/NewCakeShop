@@ -26,6 +26,7 @@
         <property name="formatters">
             <set>
                 <ref bean="customerFormatter"/>
+                <ref bean="adminFormatter"/>
 
             </set>
         </property>

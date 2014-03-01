@@ -34,7 +34,7 @@ public class LoginLogoutController {
         }
 
         // This will resolve to /WEB-INF/view/security/login.jsp
-        return "customer/login";
+        return "security/login";
     }
 
     /**

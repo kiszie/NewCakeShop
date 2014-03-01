@@ -12,16 +12,16 @@
 
         <security:intercept-url pattern="/" access="permitAll"/>
         <security:intercept-url pattern="/auth/login" access="permitAll"/>
-        <security:intercept-url pattern="/customer/**" access="permitAll"/>
-        <!--<security:intercept-url pattern="/customer/**" access="hasRole('ROLE_ADMIN')"/>-->
-        <!--<security:intercept-url pattern="/customer/**" access="hasRole('ROLE_USER')"/>-->
+
+        <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/customer/**" access="hasRole('ROLE_USER')"/>
 
 
 
         <security:form-login
                 login-page="/auth/login"
                 authentication-failure-url="/auth/login?error=true"
-                default-target-url="/customer/enter"/>
+                default-target-url="/"/>
 
         <security:logout
                 invalidate-session="true"

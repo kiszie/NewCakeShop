@@ -25,7 +25,7 @@
             <div id="headright" class="grid_7 prefix_5 omega">
                 <c:if test="${empty sessionScope['userSession']}">
                     <h3 class="login">
-                        <a href="login(Admin).jsp">Admin/</a><a href="customer/register">Sign up</a> / <a href="auth/login">Login</a></h3>
+                        <a href="auth/login">Admin</a> / <a href="customer/register">Sign up</a> / <a href="auth/login">Login</a></h3>
                 </c:if>
                 <c:if test="${not empty sessionScope['userSession']}">
                     <c:out value="${sessionScope['userSession'].name}" />
@@ -40,11 +40,14 @@
         </div>
         <div id="mainMenu" class="grid_16">
             <ul>
-                <li><a href="index.jsp" class="aActive">Home</a></li>
-                <li><a href="product-overview.jsp" target="_parent">Cakes</a></li>
+                <li><a href="index.jsp" class="active">Home</a></li>
+                <li><a href="product/list" target="_parent">Cakes</a></li>
                 <li><a href="product-details.jsp">Order &amp; Delivery</a></li>
                 <li><a href="View-history.jsp">View History</a></li>
-                <li><a href="about.jsp" target="_parent">About</a></li>
+
+                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                <li><a href="admin/addProduct">Add Product</a></li>
+                </sec:authorize>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>

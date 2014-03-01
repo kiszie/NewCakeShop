@@ -38,10 +38,14 @@
         <div id="mainMenu" class="grid_16">
             <ul>
                 <li><a href="index(User).jsp" class="aActive">Home</a></li>
-                <li><a href="product-overview.jsp" target="_parent">Cakes</a></li>
+                <li><a href="product-overview" target="_parent">Cakes</a></li>
                 <li><a href="product-details.jsp">Order &amp; Delivery</a></li>
                 <li><a href="View-history.jsp">View History</a></li>
-                <li><a href="about.jsp" target="_parent">About</a></li>
+                <%--<c:if test="${sessionScope['userSession'].role==1}">--%>
+
+                <li><a href="addProduct" >Add Product</a></li>
+
+                 <%--</c:if>--%>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>

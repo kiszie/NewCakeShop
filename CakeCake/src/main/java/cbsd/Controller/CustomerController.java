@@ -2,6 +2,8 @@ package cbsd.Controller;
 
 import cbsd.entity.Customer;
 import cbsd.entity.Image;
+import cbsd.service.CustomerService;
+import cbsd.service.ImageService;
 import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import cbsd.service.CustomerService;
-import cbsd.service.ImageService;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
@@ -19,8 +19,6 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -28,19 +26,10 @@ import java.util.Date;
  */
 @Controller
 @RequestMapping("customer")
-@SessionAttributes({"userSession","date"})
+@SessionAttributes({"userSession"})
 public class CustomerController {
 
-    @ModelAttribute("userSession")
-    public Customer getUserSession(){
-        return new Customer();
-    }
 
-    @ModelAttribute("date")
-    public Date getUserDate()
-    {
-        return Calendar.getInstance().getTime();
-    }
 
 
         @Autowired
@@ -59,14 +48,17 @@ public class CustomerController {
             model.addAttribute("customer",new Customer());
             return "customer/register";
         }
+
         @RequestMapping("list")
         public String list(Model model){
             model.addAttribute("customers", customerService.getCustomer());
-            return "customerList";
+            return "CustomerList";
 
         }
 
-        @RequestMapping("addCustomer")
+
+
+    @RequestMapping("addCustomer")
         public String addLecturer(@ModelAttribute Customer customer, BindingResult bindingResult,Model model){
         customerService.addCustomer(customer);
         return "redirect:/customer/list";
@@ -77,8 +69,12 @@ public class CustomerController {
         public String addValidCustomer(@Valid Customer customer, BindingResult bindingResult,Model model
                 ,@RequestParam("file")MultipartFile file){
             if (bindingResult.hasErrors()){
-                return "register";
+                return "customer/register";
+
+
             }
+
+
             // add image object
             try {
                 Image image = new Image();

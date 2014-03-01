@@ -1,6 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -16,6 +15,7 @@
     <script type="text/javascript" src="resources/scripts/jquery-1.4.2.js"></script>
     <script type="text/javascript" src="resources/scripts/jquery.tools.min.js"></script>
     <script type="text/javascript" src="resources/scripts/dapur.js"></script>
+
 </head>
 <body>
 <div id="warp">
@@ -28,7 +28,7 @@
             <div id="headright" class="grid_7 prefix_5 omega">
                 <c:if test="${empty sessionScope['loginUser']}">
                     <h3 class="login">
-                        <a href="login(admin).jsp">Admin/</a><a href="login.jsp">Sign up</a> / <a href="login.jsp">Login</a></h3>
+                        <a href="login(admin).jsp">Admin/</a><a href="../security/login.jsp">Sign up</a> / <a href="../security/login.jsp">Login</a></h3>
                 </c:if>
                 <c:if test="${not empty sessionScope['loginUser']}">
                 <a href="View-history.jsp"><c:out value="${sessionScope['loginUser']}" /></a>
@@ -41,7 +41,7 @@
         <div id="mainMenu" class="grid_16">
             <ul>
                 <li><a href="../index.jsp">Home</a></li>
-                <li><a href="product-overview.jsp">Cakes</a></li>
+                <li><a href="../product-overview.jsp">Cakes</a></li>
                 <li><a href="product-details.jsp">Order &amp; Delivery</a></li>
 
             </ul>
@@ -62,52 +62,66 @@
         <div class="checkout grid_16">
             <div class="newAccount grid_8 alpha">
                 <h4>Create New Account</h4>
-                <form:form  method="post" action="/customer/addValidCustomer" commandName="customer" enctype="multipart/form-data">
+                <form:form  method="post" action="customer/addValidCustomer" commandName="customer" enctype="multipart/form-data">
                 <form:hidden path="id"/>
                 <fieldset>
                         <form:label path="name">First Name: </form:label>
                         <label>
                         <form:input path="name" />
                         </label>
+                        <td><form:errors path="name" cssClass="error"/></td>
                         <br />
 
                         <form:label path="surname">Last Name: </form:label>
                         <label>
                         <form:input path="surname"/>
                         </label>
+                        <td><form:errors path="surname" cssClass="error"/></td>
                         <br />
 
                         <form:label path="password">Password:</form:label>
                          <label>
                         <form:input path="password"/>
                         </label>
+                        <td><form:errors path="password" cssClass="error"/></td>
                         <br />
 
-                        <form:label path="repassword">Retype Password:</form:label>
+                        <form:label path="password1">Retype Password:</form:label>
                         <label>
-                        <form:input path="repassword"/>
+                        <form:input path="password1"/>
                         </label>
+                         <td><form:errors path="password1" cssClass="error"/></td>
                         <br />
 
                         <form:label path="username">Username:</form:label>
                         <label>
-                        <form:input path="repassword"/>
+                        <form:input path="username"/>
                         </label>
+                         <td><form:errors path="username" cssClass="error"/></td>
                         <br />
 
                         <form:label path="address">Address:</form:label>
                         <label>
                         <form:input path="address"/>
                         </label>
+                        <td><form:errors path="address" cssClass="error"/></td>
                         <br />
 
-                    </fieldset>
-                    </div>
-            </form:form>
+                        <form:label path="image">images</form:label>
+                        <label>
+                        <input type="file" name="file" id="file" />
+                        </label>
+                        <td><form:errors path="image" cssClass="error"/></td>
+                        <br />
+
                     <p>
                         <input type="submit" value="Create New Account" tabindex="6" name="update" class="newAccountButton" />
                     </p>
+                </fieldset>
+            </div>
+
                     <input type="hidden" value="30" />
+            </form:form>
                 </form>
             </div>
             <div class="loginPage grid_8 omega">

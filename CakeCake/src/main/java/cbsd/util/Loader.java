@@ -39,13 +39,13 @@ public class Loader implements ApplicationListener<ContextRefreshedEvent> {
                 // Admin user
                 user.setRole(1);
                 userDAO.saveUser(user);
-//                user = new User();
-//                user.setName("you");
-//                // Actual password: user
-//                user.setPassword("ee11cbb19052e40b07aac0ca060c23ee");
-//                // Regular user
-//                user.setRole(2);
-//                userDAO.saveUser(user);
+                user = new User();
+                user.setName("you");
+                // Actual password: user
+                user.setPassword("ee11cbb19052e40b07aac0ca060c23ee");
+                // Regular user
+                user.setRole(2);
+                userDAO.saveUser(user);
                isLoad = true;
 
 
