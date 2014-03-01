@@ -2,7 +2,9 @@ package cbsd.Controller;
 
 import cbsd.entity.Image;
 import cbsd.entity.User;
+import cbsd.service.ImageService;
 import cbsd.service.UserService;
+import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,12 +13,15 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,7 +32,7 @@ import java.util.Date;
  */
 @Controller
 @RequestMapping("user")
-@SessionAttributes({"userSession","date"})
+//@SessionAttributes({"userSession","date"})
 public class UserController {
     @Autowired
     UserService userService;
@@ -37,11 +42,11 @@ public class UserController {
         return new User();
     }
 
-    @ModelAttribute("date")
-    public Date getUserDate()
-    {
-        return Calendar.getInstance().getTime();
-    }
+//    @ModelAttribute("date")
+//    public Date getUserDate()
+//    {
+//        return Calendar.getInstance().getTime();
+//    }
 
     @RequestMapping(method = RequestMethod.GET)
     public String login(Model model){
@@ -84,6 +89,7 @@ public class UserController {
             return "register";
         }
         // add image object
+
         try {
             Image image = new Image();
             image.setFilename(file.getName());
@@ -96,6 +102,7 @@ public class UserController {
         // image object add
         String source = user.getPassword();
         String md5 = null;
+
         try {
             MessageDigest mdEnc = MessageDigest.getInstance("MD5"); // Encryption algorithm
             mdEnc.update(source.getBytes(), 0, source.length());
@@ -106,8 +113,48 @@ public class UserController {
         user.setPassword(md5);
 
         userService.addUser(user);
-        return "CustomerList";
+        return "redirect:/";
+    }
+    @Autowired
+    ImageService imageService;
+
+    @RequestMapping(value = "image/{id}")
+    public String showImage(@PathVariable("id") Integer id, Model model,
+                            HttpServletResponse response){
+
+        try {
+            Image  image = imageService.get(id);
+            if (image != null){
+                OutputStream out = response.getOutputStream();
+                response.setContentType(image.getContentType());
+                //IOUtils.copy(new ByteArrayInputStream(image.getContent()),out);
+                ByteArrayInputStream bis = new ByteArrayInputStream(image.getContent());
+                ImageIO.setUseCache(false);
+                BufferedImage myImage = ImageIO.read(bis);
+                int rectangleSize = 300;
+                BufferedImage bi = Scalr.resize(myImage, rectangleSize);
+                ImageIO.write(bi,getContentType(image.getContentType()),out);
+                out.flush();
+                out.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+
     }
 
+    private String getContentType(String contentType){
+        if (contentType.contains("jpg")){
+            return "jpg";
+        }else if (contentType.contains("png")){
+            return "png";
+        }else if (contentType.contains("gif")){
+            return "gif";
+        }else{
+            return "jpg";
+        }
 
+   }
 }
