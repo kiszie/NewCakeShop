@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dto
@@ -15,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     UserDAO userDAO;
     @Transactional
@@ -25,7 +28,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    public User findByUsername(String username) {
+        return userDAO.findByUsername(username);
+    }
+
+    @Override
+    @Transactional
     public void addUser(User user) {
         userDAO.saveUser(user);
+    }
+
+    @Override
+    public List<User> getUser() {
+        return userDAO.getUser();
     }
 }

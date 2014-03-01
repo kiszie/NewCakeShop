@@ -23,6 +23,7 @@ public class User implements Serializable {
     @GeneratedValue
     Long id;
 
+    @Column(name="Name")
     @NotEmpty(message = "Please insert name")
     @Size(min=4,max=16,message = "Name must between 4 to 16 charecter")
     String name;
@@ -30,8 +31,7 @@ public class User implements Serializable {
     @NotEmpty(message = "Please insert password")
     String password;
 
-    @NotEmpty(message = "Please insert password")
-    String password1;
+
 
     int role=2;
 
@@ -61,7 +61,7 @@ public class User implements Serializable {
         if (image != null ? !image.equals(user.image) : user.image != null) return false;
         if (name != null ? !name.equals(user.name) : user.name != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (password1 != null ? !password1.equals(user.password1) : user.password1 != null) return false;
+
         if (surname != null ? !surname.equals(user.surname) : user.surname != null) return false;
         if (username != null ? !username.equals(user.username) : user.username != null) return false;
 
@@ -73,7 +73,7 @@ public class User implements Serializable {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (password1 != null ? password1.hashCode() : 0);
+
         result = 31 * result + role;
         result = 31 * result + (image != null ? image.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
@@ -82,13 +82,8 @@ public class User implements Serializable {
         return result;
     }
 
-    public String getPassword1() {
-        return password1;
-    }
 
-    public void setPassword1(String password1) {
-        this.password1 = password1;
-    }
+
 
     public String getSurname() {
         return surname;
@@ -154,13 +149,13 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public User(String name, String surname,String username,String password,String password1,String address,int role ) {
+    public User(String name, String surname,String username,String password,String address,int role ) {
 
         this.name=name;
         this.surname=surname;
         this.username=username;
         this.password=password;
-        this.password1=password1;
+
         this.address=address;
         this.role=role;
     }

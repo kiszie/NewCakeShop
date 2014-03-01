@@ -5,6 +5,8 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dto
@@ -25,7 +27,26 @@ public class UserDaoImpl implements UserDAO {
     }
 
     @Override
+    public User findByUsername(String username) {
+        User user = (User) sessionFactory.getCurrentSession().createQuery
+                ("from User u where u.username = '" + username +"'").uniqueResult();
+        return user;
+    }
+
+    @Override
     public void saveUser(User user) {
          sessionFactory.getCurrentSession().saveOrUpdate(user);
     }
+
+    @Override
+    public void addUser(User user) {
+        sessionFactory.getCurrentSession().saveOrUpdate(user);
+
+    }
+
+    @Override
+    public List<User> getUser() {
+        return sessionFactory.getCurrentSession().createQuery("from User").list();
+    }
+
 }

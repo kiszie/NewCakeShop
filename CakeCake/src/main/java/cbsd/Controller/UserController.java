@@ -49,6 +49,26 @@ public class UserController {
         return "/user/userRegister";
     }
 
+
+    @RequestMapping("register1")
+    public String callRegistPage(Model model){
+        model.addAttribute("user",new User());
+        return "register";
+    }
+    @RequestMapping("list")
+    public String list(Model model){
+        model.addAttribute("users", userService.getUser());
+        return "CustomerList";
+
+    }
+
+    @RequestMapping("addUser")
+    public String addUser(@ModelAttribute User user, BindingResult bindingResult,Model model){
+        userService.addUser(user);
+        return "redirect:/user/list";
+    }
+
+
     @RequestMapping(value = "register",method = RequestMethod.POST)
     public String register(@ModelAttribute User user, BindingResult bindingResult,Model model,final RedirectAttributes redirectAttributes){
         model.addAttribute("userSession",user);
@@ -58,10 +78,10 @@ public class UserController {
 
 
     @RequestMapping(value = "addValidUser",method = RequestMethod.POST)
-    public String addValidLecturer(@Valid User user, BindingResult bindingResult,Model model
+    public String addValidUser(@Valid User user, BindingResult bindingResult,Model model
             ,@RequestParam("file")MultipartFile file){
         if (bindingResult.hasErrors()){
-            return "redirect:/register";
+            return "register";
         }
         // add image object
         try {
@@ -84,8 +104,9 @@ public class UserController {
             return null;
         }
         user.setPassword(md5);
+
         userService.addUser(user);
-        return "register";
+        return "CustomerList";
     }
 
 

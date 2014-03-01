@@ -62,7 +62,7 @@
         <div class="checkout grid_16">
             <div class="newAccount grid_8 alpha">
                 <h4>Create New Account</h4>
-                <form:form  method="post" action="user/addValidUser" commandName="user" enctype="multipart/form-data">
+                <form:form  method="post" action="addValidUser" commandName="user" enctype="multipart/form-data">
                 <form:hidden path="id"/>
                 <fieldset>
                         <form:label path="name">First Name: </form:label>
@@ -79,10 +79,10 @@
                         <td><form:errors path="surname" cssClass="error"/></td>
                         <br />
 
-                    <form:label path="username">Password:</form:label>
-                    <label>
-                        <form:input path="username"/>
-                    </label>
+                         <form:label path="username">Username:</form:label>
+                            <label>
+                            <form:input path="username"/>
+                     </label>
                     <td><form:errors path="username" cssClass="error"/></td>
                     <br />
 
@@ -93,12 +93,7 @@
                         <td><form:errors path="password" cssClass="error"/></td>
                         <br />
 
-                    <form:label path="password1">Password:</form:label>
-                    <label>
-                        <form:input path="password1"/>
-                    </label>
-                    <td><form:errors path="password1" cssClass="error"/></td>
-                    <br />
+
 
 
                         <form:label path="address">Address:</form:label>
@@ -108,12 +103,9 @@
                         <td><form:errors path="address" cssClass="error"/></td>
                         <br />
 
-                        <form:label path="role">Role:</form:label>
-                        <label>
-                        <form:input path="role"/>
-                         </label>
-                        <td><form:errors path="role" cssClass="error"/></td>
-                        <br />
+
+                        <form:hidden path="role" value="2"/>
+
 
                         <form:label path="image">images</form:label>
                         <label>

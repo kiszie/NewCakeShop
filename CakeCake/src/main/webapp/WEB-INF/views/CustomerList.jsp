@@ -17,18 +17,19 @@
     <td width="213" valign="top"><p><strong>username</strong></p></td>
     <td width="213" valign="top"><p><strong>password</strong></p></td>
     <td width="213" valign="top"><p><strong>address</strong></p></td>
+    <td width="213" valign="top"><p><strong>image</strong></p></td>
     </thead>
-    <c:forEach items="${customers}" var="customer" varStatus="status">
+    <c:forEach items="${users}" var="user" varStatus="status">
     <tr>
         <td width="213" valign="top"><p><strong>${status.count}</strong></p></td>
-        <td width="213" valign="top"><p><strong>${customer.name}</strong></p></td>
-        <td width="213" valign="top"><p><strong>${customer.surname}</strong></p></td>
-        <td width="213" valign="top"><p><strong>${customer.username}</strong></p></td>
-        <td width="213" valign="top"><p><strong>${customer.password}</strong></p></td>
-        <td width="213" valign="top"><p><strong>${customer.address}</strong></p></td>
-        <sec:authorize access="hasRole('ROLE_ADMIN')">
-            <td width="213" valign="top"><img src="image/${customer.image.id}"> </td>
-        </sec:authorize>
+        <td width="213" valign="top"><p><strong>${user.name}</strong></p></td>
+        <td width="213" valign="top"><p><strong>${user.surname}</strong></p></td>
+        <td width="213" valign="top"><p><strong>${user.username}</strong></p></td>
+        <td width="213" valign="top"><p><strong>${user.password}</strong></p></td>
+        <td width="213" valign="top"><p><strong>${user.address}</strong></p></td>
+
+            <td width="213" valign="top"><img src="image/${user.image.id}"> </td>
+
     </tr>
     </c:forEach>
 </table>
