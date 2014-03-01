@@ -54,7 +54,7 @@
 //
 //
 //
-//    @RequestMapping("addCustomer")
+//    @RequestMapping345("addCustomer")
 //    public String addLecturer(@ModelAttribute Customer customer, BindingResult bindingResult,Model model){
 //        customerService.addCustomer(customer);
 //        return "redirect:/customer/list";

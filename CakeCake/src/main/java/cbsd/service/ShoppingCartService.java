@@ -8,7 +8,7 @@ import java.util.List;
 public interface ShoppingCartService {
 
 
-    public void addShoppingCart(ShoppingCartService shoppingCart);
+    public void addShoppingCart(String shoppingCart);
 
 
     public List<ShoppingCartService> getShoppingCart();

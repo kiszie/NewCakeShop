@@ -34,9 +34,6 @@
             <sec:authorize access="hasRole('ROLE_ADMIN')">
                 <td width="213" valign="top"><p><strong><a href="delete/${product.id}" >Delete</a></strong></td>
             </sec:authorize>
-            <sec:authorize access="hasRole('ROLE_USER')">
-                <td width="213" valign="top"><p><strong><a href="addToShoppingCart/${product.id}">Select</a></strong></td>
-            </sec:authorize>
         </tr>
     </c:forEach>
 </table>
