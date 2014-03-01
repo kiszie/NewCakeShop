@@ -29,7 +29,10 @@
                 <td width="213" valign="top"><img src="image/${product.image.id}"> </td>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <td width="213" valign="top"><p><strong><a href="update/{id}" >Edit</a></strong></td>
+                <td width="213" valign="top"><p><strong><a href="update/${product.id}" >Edit</a></strong></td>
+            </sec:authorize>
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                <td width="213" valign="top"><p><strong><a href="delete/${product.id}" >Delete</a></strong></td>
             </sec:authorize>
         </tr>
     </c:forEach>

@@ -32,4 +32,10 @@ public class ProductServiceImpl implements ProductService {
     public Product findByID(Integer id) {
         return  productDAO.findByID(id);
     }
+
+    @Override
+    @Transactional
+    public void deleteById(Integer id) {
+        productDAO.deleteById(id);
+    }
 }

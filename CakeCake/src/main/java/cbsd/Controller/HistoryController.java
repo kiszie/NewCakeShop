@@ -1,9 +1,9 @@
 package cbsd.Controller;
 
+import cbsd.entity.Customer;
 import cbsd.entity.Image;
-import cbsd.entity.Product;
+import cbsd.service.CustomerService;
 import cbsd.service.ImageService;
-import cbsd.service.ProductService;
 import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,46 +21,51 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * Created by Dell on 28/2/2557.
- */
+* Created by Dell on 1/3/2557.
+*/
 @Controller
-@RequestMapping("product")
+@RequestMapping("history")
 @SessionAttributes({"userSession"})
-public class ProductController {
+public class HistoryController {
 
     @Autowired
-    ProductService productService;
+    HistoryService historyService;
 
     @RequestMapping("enter")
-        public String callHomepage(Model model){
-            model.addAttribute("product",new Product());
-            return "index(User)";
+    public String callHomepage(Model model){
+        model.addAttribute("customer",new Customer());
+        return "index(User)";
     }
 
-    @RequestMapping("add")
-    public String callAddProductPage(Model model){
-        model.addAttribute("product",new Product());
-        return "product/addProduct1";
+
+
+    @RequestMapping("register")
+    public String callRegistPage(Model model){
+        model.addAttribute("customer",new Customer());
+        return "customer/register";
     }
+
     @RequestMapping("list")
     public String list(Model model){
-        model.addAttribute("products", productService.getProduct());
-        return "productList";
+        model.addAttribute("customers", customerService.getCustomer());
+        return "CustomerList";
 
     }
 
-    @RequestMapping("addProduct")
-    public String addProduct(@ModelAttribute Product product, BindingResult bindingResult,Model model){
-        productService.addProduct(product);
-        return "redirect:/product/list";
+
+
+    @RequestMapping("addCustomer")
+    public String addLecturer(@ModelAttribute Customer customer, BindingResult bindingResult,Model model){
+        customerService.addCustomer(customer);
+        return "redirect:/customer/list";
     }
 
 
-    @RequestMapping(value = "addValidProduct",method = RequestMethod.POST)
-    public String addValidProduct(@Valid Product product, BindingResult bindingResult,Model model
+    @RequestMapping(value = "addValidCustomer",method = RequestMethod.POST)
+    public String addValidCustomer(@Valid Customer customer, BindingResult bindingResult,Model model
             ,@RequestParam("file")MultipartFile file){
         if (bindingResult.hasErrors()){
-            return "product/addProduct1";
+            return "customer/register";
 
 
         }
@@ -72,32 +77,23 @@ public class ProductController {
             image.setFilename(file.getName());
             image.setContentType(file.getContentType());
             image.setContent(file.getBytes());
-            product.setImage(image);
+            customer.setImage(image);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         // image object add
-        productService.addProduct(product);
-        return "redirect:/product/list";
+        customerService.addCustomer(customer);
+        return "redirect:/customer/list";
     }
 
     @RequestMapping(value = "update/{id}")
-    public String updateProduct(@PathVariable("id") Integer id, Model model){
-        Product product = productService.findByID(id);
-        model.addAttribute("product",product);
+    public String updateCustomer(@PathVariable("id") Integer id, Model model){
+        Customer customer = customerService.findByID(id);
+        model.addAttribute("customer",customer);
 
-        return "product/addProduct1";
+        return "customerRegist";
     }
-
-    @RequestMapping(value = "delete/{id}")
-    public String deleteProduct(@PathVariable("id") Integer id, Model model){
-        productService.deleteById(id);
-
-
-        return "redirect:/product/list";
-    }
-
 
     @Autowired
     ImageService imageService;
@@ -141,6 +137,5 @@ public class ProductController {
         }
 
     }
-
 
 }

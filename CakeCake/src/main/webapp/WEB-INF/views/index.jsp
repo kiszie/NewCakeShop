@@ -48,6 +48,9 @@
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                 <li><a href="admin/addProduct">Add Product</a></li>
                 </sec:authorize>
+                <sec:authorize access="hasRole('ROLE_USER')">
+                    <li><a href="user/register">Edit</a></li>
+                </sec:authorize>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>

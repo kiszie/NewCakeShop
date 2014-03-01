@@ -32,4 +32,11 @@ public class ProductDAOImpl implements ProductDAO {
     public Product findByID(Integer id) {
         return (Product) sessionFactory.getCurrentSession().get(Product.class,id);
     }
+    @Override
+    public void deleteById(Integer id) {
+        Product product = (Product) sessionFactory.getCurrentSession().load(Product.class,id);
+        if(null!=product){
+            sessionFactory.getCurrentSession().delete(product);
+        }
+    }
 }
