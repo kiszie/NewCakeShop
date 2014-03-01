@@ -64,94 +64,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/register.jsp">
+      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="20" selection-start="3741" selection-end="3741" vertical-scroll-proportion="-7.1923075" vertical-offset="1020" max-vertical-offset="3519">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="41" selection-start="2351" selection-end="2351" vertical-scroll-proportion="22.884615" vertical-offset="1326" max-vertical-offset="3451">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCartDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/ShoppingCartDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="32" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCartDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/ShoppingCartDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="32" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCart.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/ShoppingCart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCartServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/ShoppingCartServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addProduct1.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/addProduct1.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="42" selection-start="2581" selection-end="2581" vertical-scroll-proportion="9.807693" vertical-offset="1020" max-vertical-offset="3213">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCart.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/ShoppingCart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productList.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="72" selection-start="1481" selection-end="1481" vertical-scroll-proportion="0.6638418" vertical-offset="292" max-vertical-offset="731">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/ProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="27" selection-start="2725" selection-end="2725" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2125">
+            <state line="15" column="4" selection-start="398" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="459">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDetailServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/security/UserDetailServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="81" selection-start="1417" selection-end="1420" vertical-scroll-proportion="0.0" vertical-offset="537" max-vertical-offset="969">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1753#1771#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2346">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="34" selection-start="1001" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2329">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="20" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-security.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="58" selection-start="967" selection-end="967" vertical-scroll-proportion="-2.72" vertical-offset="153" max-vertical-offset="833">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deniedpage.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/security/deniedpage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/security/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="0" selection-start="3642" selection-end="3642" vertical-scroll-proportion="-9.807693" vertical-offset="969" max-vertical-offset="2397">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Loader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/util/Loader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="32" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="901">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,8 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/addProduct1.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cbsd/Controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cbsd/Controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cbsd/Controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/register.jsp" />
@@ -217,6 +220,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cbsd/Controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cbsd/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
       </list>
     </option>
   </component>
@@ -317,20 +322,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CakeCake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CakeCake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CakeCake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -697,24 +688,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CakeCake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CakeCake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -969,7 +942,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/lab12" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab12" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -980,11 +953,11 @@
       <recent name="service.security" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SONY\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views\security" />
       <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views\product" />
       <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views\admin" />
       <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views\user" />
-      <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\IdeaProjects\CakeCake\src\main\webapp\WEB-INF\views\customer" />
@@ -1315,11 +1288,12 @@
       <workItem from="1393589616999" duration="536000" />
       <workItem from="1393590762098" duration="23090000" />
       <workItem from="1393641357161" duration="9424000" />
+      <workItem from="1393653063864" duration="5198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75724000" />
+    <option name="totallyTimeSpent" value="80922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1378,68 +1352,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/security/UserDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="74" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/AdminDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="35" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="663">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/formatter/AdminFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="14" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="612">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/security/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3642" selection-end="3642" vertical-scroll-proportion="-7.8461537" vertical-offset="1020" max-vertical-offset="2397" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/util/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="32" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/formatter/CustomerFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="57" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="476">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="162" column="17" selection-start="4414" selection-end="4414" vertical-scroll-proportion="0.0" vertical-offset="2374" max-vertical-offset="2856">
@@ -1500,13 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="398" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/AdminServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="8" selection-start="727" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
@@ -1514,24 +1419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login(Admin).jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="23" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-5.8846154" vertical-offset="306" max-vertical-offset="2397" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="33" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="697">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1570,39 +1461,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index(User).jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="29" selection-start="2372" selection-end="2382" vertical-scroll-proportion="-9.807693" vertical-offset="510" max-vertical-offset="3417">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/lecturerList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="397" selection-end="397" vertical-scroll-proportion="-0.65384614" vertical-offset="136" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="9" column="6" selection-start="397" selection-end="397" vertical-scroll-proportion="-0.65384614" vertical-offset="136" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product-overview.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="942" selection-end="942" vertical-scroll-proportion="-1.3076923" vertical-offset="204" max-vertical-offset="3927">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="71" selection-start="790" selection-end="790" vertical-scroll-proportion="-4.42" vertical-offset="0" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="14" column="7" selection-start="942" selection-end="942" vertical-scroll-proportion="-1.3076923" vertical-offset="204" max-vertical-offset="3927" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/CustomerDAOImpl.java">
@@ -1628,34 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/hibernate-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="16.32" vertical-offset="408" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="44" selection-start="1115" selection-end="1115" vertical-scroll-proportion="-6.72" vertical-offset="308" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="9" selection-start="1338" selection-end="4510" vertical-scroll-proportion="0.0" vertical-offset="1881" max-vertical-offset="2329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="23" selection-start="417" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="121" max-vertical-offset="765">
@@ -1675,15 +1513,6 @@
             <element signature="e#906#907#0" expanded="false" />
             <element signature="e#946#947#0" expanded="false" />
             <element signature="e#978#979#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="39" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1224">
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1732,21 +1561,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="20" selection-start="3741" selection-end="3741" vertical-scroll-proportion="-7.1923075" vertical-offset="1020" max-vertical-offset="3519">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="2351" selection-end="2351" vertical-scroll-proportion="22.884615" vertical-offset="1326" max-vertical-offset="3451">
+        <state line="71" column="20" selection-start="3741" selection-end="3741" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3519">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/addProduct1.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="42" selection-start="2581" selection-end="2581" vertical-scroll-proportion="9.807693" vertical-offset="1020" max-vertical-offset="3213">
+        <state line="45" column="42" selection-start="2581" selection-end="2581" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="58" selection-start="732" selection-end="732" vertical-scroll-proportion="2.7307692" vertical-offset="377" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/dao/AdminDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="39" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
@@ -1754,15 +1611,125 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="27" selection-start="2725" selection-end="2725" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index(User).jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="39" selection-start="2000" selection-end="2000" vertical-scroll-proportion="-15.692307" vertical-offset="255" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="41" selection-start="2351" selection-end="2351" vertical-scroll-proportion="26.807692" vertical-offset="1428" max-vertical-offset="3451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/hibernate-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="16.32" vertical-offset="408" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="1115" selection-end="1115" vertical-scroll-proportion="-2.64" vertical-offset="410" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login(Admin).jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="23" selection-start="1519" selection-end="1519" vertical-scroll-proportion="17.653847" vertical-offset="918" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/util/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="32" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="398" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productList.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="72" selection-start="1481" selection-end="1481" vertical-scroll-proportion="0.6638418" vertical-offset="292" max-vertical-offset="731">
+        <state line="16" column="13" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/service/security/UserDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="81" selection-start="1417" selection-end="1420" vertical-scroll-proportion="0.0" vertical-offset="537" max-vertical-offset="969">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1753#1771#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="1001" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cbsd/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="58" selection-start="967" selection-end="967" vertical-scroll-proportion="-2.72" vertical-offset="153" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/security/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="3642" selection-end="3642" vertical-scroll-proportion="-9.807693" vertical-offset="969" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/security/deniedpage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
           <folding />
         </state>
       </provider>
