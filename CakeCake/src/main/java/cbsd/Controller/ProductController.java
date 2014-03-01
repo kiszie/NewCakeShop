@@ -87,7 +87,7 @@ public class ProductController {
         Product product = productService.findByID(id);
         model.addAttribute("product",product);
 
-        return "addProduct1";
+        return "product/addProduct1";
     }
 
     @Autowired

@@ -18,6 +18,7 @@ public class Customer {
     @Column(name = "ID")
     @GeneratedValue
     private Integer id;
+    int role = 2;
 
     public Image getImage() {
         return image;
@@ -58,7 +59,16 @@ public class Customer {
     String address;
 
 
-     @Cascade({CascadeType.ALL})
+    @Column(name = "status")
+    @NotEmpty(message = "Please enter role")
+    @Size(min=1,max=1)
+    String status="2";
+
+
+
+
+
+    @Cascade({CascadeType.ALL})
     @OneToOne
     Image image;
 
@@ -118,6 +128,14 @@ public class Customer {
         this.address = address;
     }
 
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -125,6 +143,8 @@ public class Customer {
 
         Customer customer = (Customer) o;
 
+        if (role != customer.role) return false;
+        if (role != customer.role) return false;
         if (address != null ? !address.equals(customer.address) : customer.address != null) return false;
         if (id != null ? !id.equals(customer.id) : customer.id != null) return false;
         if (image != null ? !image.equals(customer.image) : customer.image != null) return false;
@@ -140,12 +160,14 @@ public class Customer {
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + role;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (password1 != null ? password1.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + role;
         result = 31 * result + (image != null ? image.hashCode() : 0);
         return result;
     }

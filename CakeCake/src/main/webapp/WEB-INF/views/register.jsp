@@ -22,13 +22,13 @@
     <div id="main" class="container_16">
         <div id="header" class="grid_16">
             <div id="logo" class="grid_4 alpha">
-                <h1><a href="../index.jsp">DapurKue</a></h1>
+                <h1><a href="index.jsp">DapurKue</a></h1>
                 <h2>Famously Delicious</h2>
             </div>
             <div id="headright" class="grid_7 prefix_5 omega">
                 <c:if test="${empty sessionScope['loginUser']}">
                     <h3 class="login">
-                        <a href="login(admin).jsp">Admin/</a><a href="../security/login.jsp">Sign up</a> / <a href="../security/login.jsp">Login</a></h3>
+                        <a href="login(admin).jsp">Admin/</a><a href="security/login.jsp">Sign up</a> / <a href="security/login.jsp">Login</a></h3>
                 </c:if>
                 <c:if test="${not empty sessionScope['loginUser']}">
                 <a href="View-history.jsp"><c:out value="${sessionScope['loginUser']}" /></a>
@@ -40,8 +40,8 @@
         </div>
         <div id="mainMenu" class="grid_16">
             <ul>
-                <li><a href="../index.jsp">Home</a></li>
-                <li><a href="../product-overview.jsp">Cakes</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="product-overview.jsp">Cakes</a></li>
                 <li><a href="product-details.jsp">Order &amp; Delivery</a></li>
 
             </ul>
@@ -62,7 +62,7 @@
         <div class="checkout grid_16">
             <div class="newAccount grid_8 alpha">
                 <h4>Create New Account</h4>
-                <form:form  method="post" action="customer/addValidCustomer" commandName="customer" enctype="multipart/form-data">
+                <form:form  method="post" action="user/addValidUser" commandName="user" enctype="multipart/form-data">
                 <form:hidden path="id"/>
                 <fieldset>
                         <form:label path="name">First Name: </form:label>
@@ -79,6 +79,13 @@
                         <td><form:errors path="surname" cssClass="error"/></td>
                         <br />
 
+                    <form:label path="username">Password:</form:label>
+                    <label>
+                        <form:input path="username"/>
+                    </label>
+                    <td><form:errors path="username" cssClass="error"/></td>
+                    <br />
+
                         <form:label path="password">Password:</form:label>
                          <label>
                         <form:input path="password"/>
@@ -86,25 +93,26 @@
                         <td><form:errors path="password" cssClass="error"/></td>
                         <br />
 
-                        <form:label path="password1">Retype Password:</form:label>
-                        <label>
+                    <form:label path="password1">Password:</form:label>
+                    <label>
                         <form:input path="password1"/>
-                        </label>
-                         <td><form:errors path="password1" cssClass="error"/></td>
-                        <br />
+                    </label>
+                    <td><form:errors path="password1" cssClass="error"/></td>
+                    <br />
 
-                        <form:label path="username">Username:</form:label>
-                        <label>
-                        <form:input path="username"/>
-                        </label>
-                         <td><form:errors path="username" cssClass="error"/></td>
-                        <br />
 
                         <form:label path="address">Address:</form:label>
                         <label>
                         <form:input path="address"/>
                         </label>
                         <td><form:errors path="address" cssClass="error"/></td>
+                        <br />
+
+                        <form:label path="role">Role:</form:label>
+                        <label>
+                        <form:input path="role"/>
+                         </label>
+                        <td><form:errors path="role" cssClass="error"/></td>
                         <br />
 
                         <form:label path="image">images</form:label>

@@ -11,4 +11,6 @@ import cbsd.entity.User;
  */
 public interface UserService {
     User findByName(String name);
+
+    public void addUser(User user);
 }

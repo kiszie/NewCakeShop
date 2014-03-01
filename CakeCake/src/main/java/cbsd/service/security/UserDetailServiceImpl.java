@@ -33,7 +33,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         try{
             User appUser = userDAO.findByName(s);
             user = new org.springframework.security.core.userdetails.User(
-                    appUser.getName(),appUser.getPassword().toLowerCase(),
+                    appUser.getUsername(),appUser.getPassword().toLowerCase(),
                     true,true,true,true,getAuthorities(new Integer(appUser.getRole())));
         } catch (Exception e) {
 

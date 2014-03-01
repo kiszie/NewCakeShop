@@ -27,7 +27,8 @@
                         <a href="login(admin).jsp">Admin/</a><a href="login.jsp">Sign up</a> / <a href="login.jsp">Login</a></h3>
                 </c:if>
                 <c:if test="${not empty sessionScope['loginUser']}">
-                <a href="View-history.jsp"><c:out value="${sessionScope['loginUser']}" /></a>
+                <a href="View-history.jsp">
+                    <c:out value="${sessionScope['loginUser']}" /></a>
                     <a href="logout.jsp">Logout </a>
                 </c:if>
                 <p>Subtotal: $ 00.00</p>

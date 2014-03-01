@@ -1,17 +1,20 @@
 package cbsd.Controller;
 
+import cbsd.entity.Image;
 import cbsd.entity.User;
-import cbsd.service.CustomerService;
+import cbsd.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -26,6 +29,8 @@ import java.util.Date;
 @RequestMapping("user")
 @SessionAttributes({"userSession","date"})
 public class UserController {
+    @Autowired
+    UserService userService;
 
     @ModelAttribute("userSession")
     public User getUserSession(){
@@ -51,16 +56,37 @@ public class UserController {
         return "redirect:/lecturer/list";
     }
 
-    @Autowired
-    CustomerService customerService;
-    @RequestMapping("list")
-    public String list(@ModelAttribute("userSession")User user,Model model){
-        model.addAttribute("user",user);
-        model.addAttribute("customers", customerService.getCustomer());
 
-        return "customerList";
+    @RequestMapping(value = "addValidUser",method = RequestMethod.POST)
+    public String addValidLecturer(@Valid User user, BindingResult bindingResult,Model model
+            ,@RequestParam("file")MultipartFile file){
+        if (bindingResult.hasErrors()){
+            return "redirect:/register";
+        }
+        // add image object
+        try {
+            Image image = new Image();
+            image.setFilename(file.getName());
+            image.setContentType(file.getContentType());
+            image.setContent(file.getBytes());
+            user.setImage(image);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // image object add
+        String source = user.getPassword();
+        String md5 = null;
+        try {
+            MessageDigest mdEnc = MessageDigest.getInstance("MD5"); // Encryption algorithm
+            mdEnc.update(source.getBytes(), 0, source.length());
+            md5 = new BigInteger(1, mdEnc.digest()).toString(16); // Encrypted string
+        } catch (Exception ex) {
+            return null;
+        }
+        user.setPassword(md5);
+        userService.addUser(user);
+        return "register";
     }
-
 
 
 }

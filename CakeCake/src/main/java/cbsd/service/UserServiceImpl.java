@@ -22,4 +22,10 @@ public class UserServiceImpl implements UserService {
     public User findByName(String name) {
         return userDAO.findByName(name);
     }
+
+    @Override
+    @Transactional
+    public void addUser(User user) {
+        userDAO.saveUser(user);
+    }
 }

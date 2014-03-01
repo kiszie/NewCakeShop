@@ -25,7 +25,7 @@
             <div id="headright" class="grid_7 prefix_5 omega">
                 <c:if test="${empty sessionScope['userSession']}">
                     <h3 class="login">
-                        <a href="auth/login">Admin</a> / <a href="customer/register">Sign up</a> / <a href="auth/login">Login</a></h3>
+                        <a href="auth/login">Admin</a> / <a href="register">Sign up</a> / <a href="auth/login">Login</a></h3>
                 </c:if>
                 <c:if test="${not empty sessionScope['userSession']}">
                     <c:out value="${sessionScope['userSession'].name}" />

@@ -37,6 +37,10 @@ public class LoginLogoutController {
         return "security/login";
     }
 
+
+
+
+
     /**
      * Handles and retrieves the denied JSP page. This is shown whenever a regular user
      * tries to access an admin only page.
