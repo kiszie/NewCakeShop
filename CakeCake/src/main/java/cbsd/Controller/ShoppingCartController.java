@@ -41,7 +41,7 @@
 //    }
 //
 //    @RequestMapping("addProduct")
-//    public String addShoppingCart(@ModelAttribute ShoppingCart shoppingCart, BindingResult bindingResult,Model model){
+//    public String addToShoppingCart(@ModelAttribute ShoppingCart shoppingCart, BindingResult bindingResult,Model model){
 //        shoppingCartService.addShoppingCart(shoppingCart);
 //        return "redirect:/shoppingcart/list";
 //    }
