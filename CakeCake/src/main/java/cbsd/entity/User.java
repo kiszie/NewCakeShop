@@ -23,6 +23,7 @@ public class User implements Serializable {
     @GeneratedValue
     Long id;
 
+
     @Column(name="Name")
     @NotEmpty(message = "Please insert name")
     @Size(min=4,max=16,message = "Name must between 4 to 16 charecter")

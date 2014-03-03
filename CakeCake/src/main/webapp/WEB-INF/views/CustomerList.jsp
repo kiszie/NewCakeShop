@@ -7,7 +7,8 @@
     <title></title>
 </head>
 <body>
-<jsp:include page="user/header.jsp"/>
+<p><strong>user name: ${userSession.name}</strong></p>
+<%--<jsp:include page="user/header.jsp"/>--%>
 <h1>The customer list</h1>
 <table border="1" cellspacing="0" cellpadding="0">
     <thead>

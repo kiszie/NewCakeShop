@@ -1,13 +1,20 @@
 package cbsd.Controller;
 
+//import cbsd.entity.History;
 import cbsd.entity.Image;
 import cbsd.entity.User;
 import cbsd.service.ImageService;
 import cbsd.service.UserService;
+import cbsd.service.UserServiceImpl;
+import cbsd.service.security.UserDetailServiceImpl;
 import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -38,7 +45,8 @@ public class UserController {
     UserService userService;
 
     @ModelAttribute("userSession")
-    public User getUserSession(){
+    public User getUserSession(ModelMap model){
+
         return new User();
     }
 
@@ -58,11 +66,22 @@ public class UserController {
     @RequestMapping("register1")
     public String callRegistPage(Model model){
         model.addAttribute("user",new User());
+
         return "register";
     }
     @RequestMapping("list")
-    public String list(Model model){
+    public String list(Model model, final RedirectAttributes redirectAttributes){
+        //UserDetailServiceImpl userDetailService = new UserDetailServiceImpl();
+//        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("users", userService.getUser());
+//        model.addAttribute("user", userDetails.getUsername());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findByUsername(authentication.getName());
+        if(user != null){
+            model.addAttribute("userSession",user);
+            redirectAttributes.addFlashAttribute("userSession",user) ;
+            return "CustomerList";
+        }
         return "CustomerList";
 
     }
@@ -84,7 +103,7 @@ public class UserController {
 
     @RequestMapping(value = "addValidUser",method = RequestMethod.POST)
     public String addValidUser(@Valid User user, BindingResult bindingResult,Model model
-            ,@RequestParam("file")MultipartFile file){
+            ,@RequestParam("file")MultipartFile file, final RedirectAttributes redirectAttributes){
         if (bindingResult.hasErrors()){
             return "register";
         }
@@ -112,7 +131,16 @@ public class UserController {
         }
         user.setPassword(md5);
 
-        userService.addUser(user);
+       // userService.addUser(user);
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        user = userService.findByUsername(authentication.getName());
+        if(user != null){
+            model.addAttribute("userSession",user);
+            redirectAttributes.addFlashAttribute("userSession",user) ;
+            return "redirect:/";
+        }
+
         return "redirect:/";
     }
     @Autowired

@@ -11,9 +11,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:choose>
-<c:when test="${sessionScope.userSession.name != null}">
-    user name: ${sessionScope.userSession.name}
-    ${sessionScope.date}
+<c:when test="${not empty userSession}">
+    user name: ${userSession.name}
+    <%--${sessionScope.date}--%>
 </c:when>
 <c:otherwise>
         no user register

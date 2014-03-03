@@ -24,18 +24,18 @@
                 <h2>Famously Delicious</h2>
             </div>
             <div id="headright" class="grid_7 prefix_5 omega">
-                <c:if test="${empty sessionScope['userSession']}">
+                <choose>
+                <when test="${empty userSession.name}" >
                     <h3 class="login">
                         <a href="auth/login">Admin</a> / <a href="user/register1">Sign up</a> / <a href="auth/login">Login</a></h3>
-                </c:if>
-                <c:if test="${not empty sessionScope['userSession']}">
-                    <c:out value="${sessionScope['userSession'].name}" />
-                    <a href="logout.jsp">Logout
-
-                    </a>
-                    <c:out value="${sessionScope['loginUser']}" />
-                </c:if>
+                </when>
+                <otherwise>
+                    <c:out value="${userSession.name}" />
+                    <a href="logout.jsp">Logout </a>
+                    <%--<c:out value="${sessionScope['loginUser']}" />--%>
+                </otherwise>
                 <p>Subtotal: $ 00.00</p>
+                </choose>
                 <p><span class="vChart"><a href="shoppingcart.jsp">View Cart</a></span> <span class="cOut"><a href="checkout.jsp">Checkout</a></span></p>
             </div>
         </div>
