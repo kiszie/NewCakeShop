@@ -2,6 +2,7 @@ package cbsd.util;
 
 import cbsd.dao.CustomerDAO;
 import cbsd.dao.UserDAO;
+import cbsd.entity.Product;
 import cbsd.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -34,7 +35,7 @@ public class Loader implements ApplicationListener<ContextRefreshedEvent> {
 
                 // add the login data
                 User user = new User();
-                user.setUsername("chartchai");
+                user.setUsername("beyonce");
                 user.setName("BaiTong");
                 user.setSurname("Surname");
                 user.setAddress("225");
@@ -44,6 +45,7 @@ public class Loader implements ApplicationListener<ContextRefreshedEvent> {
                 // Admin user
                 user.setRole(1);
                 userDAO.saveUser(user);
+
                 user = new User();
                 user.setUsername("you");
                 user.setName("BaiToey");
@@ -56,7 +58,17 @@ public class Loader implements ApplicationListener<ContextRefreshedEvent> {
                 // Regular user
                 user.setRole(2);
                 userDAO.saveUser(user);
+
+                Product product = new Product();
+                product.setName("cococo");
+                product.setDes("BaiTong");
+                user.setSurname("Surname");
+                user.setAddress("225");
+                // Actual password: admin
+                user.setPassword("21232f297a57a5a743894a0e4a801fc3");
                isLoad = true;
+
+
 
 
         }

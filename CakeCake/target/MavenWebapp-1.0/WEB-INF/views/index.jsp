@@ -46,7 +46,7 @@
                 <li><a href="View-history.jsp">View History</a></li>
 
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <li><a href="admin/addProduct">Add Product</a></li>
+                <li><a href="product/addProduct1">Add Product</a></li>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <li><a href="customer/register">Edit</a></li>

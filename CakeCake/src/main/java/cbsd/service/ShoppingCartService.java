@@ -1,18 +1,15 @@
 package cbsd.service;
 
+import cbsd.entity.Product;
+import cbsd.entity.ShoppingCart;
+
 import java.util.List;
 
 /**
- * Created by Dell on 1/3/2557.
+ * Created by Dell on 3/3/2557.
  */
 public interface ShoppingCartService {
-
-
-    public void addShoppingCart(String shoppingCart);
-
-
-    public List<ShoppingCartService> getShoppingCart();
-
-
-    ShoppingCartService findByID(Integer id);
+    public void addShoppingcart(ShoppingCart shoppingCart);
+    public List<ShoppingCart> getShoppingCart();
+    Product findByID(Integer id);
 }

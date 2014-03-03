@@ -1,12 +1,9 @@
 package cbsd.entity;
 
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 /**
@@ -38,7 +35,7 @@ public class Product {
     String des;
 
     @Column(name = "price")
-    @NumberFormat(style = NumberFormat.Style.NUMBER)
+
     double price;
 
 

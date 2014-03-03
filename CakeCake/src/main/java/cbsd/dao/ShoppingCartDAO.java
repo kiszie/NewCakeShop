@@ -1,16 +1,16 @@
 package cbsd.dao;
 
-import cbsd.service.ShoppingCartService;
+import cbsd.entity.Product;
+import cbsd.entity.ShoppingCart;
 
 import java.util.List;
 
 /**
-* Created by Dell on 1/3/2557.
-*/
+ * Created by Dell on 3/3/2557.
+ */
 public interface ShoppingCartDAO {
-    List<ShoppingCartService> getShoppingCart();
+    public void addShoppingcart(ShoppingCart shoppingCart);
+    public List<ShoppingCart> getShoppingCart();
+    Product findByID(Integer id);
 
-    void addShoppingCart(ShoppingCartService customer);
-
-    ShoppingCartService findById(Integer id);
 }

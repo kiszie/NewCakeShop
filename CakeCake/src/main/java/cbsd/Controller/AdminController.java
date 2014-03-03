@@ -20,8 +20,6 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -31,17 +29,6 @@ import java.util.Date;
 @RequestMapping("admin")
 @SessionAttributes({"userSession"})
 public class AdminController {
-
-    @ModelAttribute("userSession")
-    public Admin getUserSession(){
-        return new Admin();
-    }
-
-    @ModelAttribute("date")
-    public Date getUserDate()
-    {
-        return Calendar.getInstance().getTime();
-    }
 
 
     @Autowired
