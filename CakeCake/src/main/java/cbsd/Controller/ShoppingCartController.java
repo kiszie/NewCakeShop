@@ -2,6 +2,7 @@ package cbsd.Controller;
 
 import cbsd.entity.Product;
 import cbsd.entity.ShoppingCart;
+import cbsd.service.ShoppingCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,9 +40,9 @@ public class ShoppingCartController {
 
     }
 
-    @RequestMapping("addProduct")
+    @RequestMapping("addToShoppingCart")
     public String addShoppingCart(@ModelAttribute ShoppingCart shoppingCart, BindingResult bindingResult,Model model){
-        shoppingCartService.addShoppingCart(shoppingCart);
+        shoppingCartService.addShoppingcart(shoppingCart);
         return "redirect:/shoppingcart/list";
     }
 

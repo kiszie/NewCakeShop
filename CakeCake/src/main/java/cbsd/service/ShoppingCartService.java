@@ -1,6 +1,5 @@
 package cbsd.service;
 
-import cbsd.entity.Product;
 import cbsd.entity.ShoppingCart;
 
 import java.util.List;
@@ -11,5 +10,5 @@ import java.util.List;
 public interface ShoppingCartService {
     public void addShoppingcart(ShoppingCart shoppingCart);
     public List<ShoppingCart> getShoppingCart();
-    Product findByID(Integer id);
+    ShoppingCart findByID(Integer id);
 }

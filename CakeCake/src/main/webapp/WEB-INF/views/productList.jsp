@@ -2,6 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <title></title>
@@ -15,6 +16,7 @@
     <td width="213" valign="top"><p><strong>Product name</strong></p></td>
     <td width="213" valign="top"><p><strong>Description</strong></p></td>
     <td width="213" valign="top"><p><strong>Price</strong></p></td>
+    <td width="213" valign="top"><p><strong>Image</strong></p></td>
 
 
     </thead>
@@ -25,9 +27,9 @@
             <td width="213" valign="top"><p><strong>${product.des}</strong></p></td>
             <td width="213" valign="top"><p><strong>${product.price}</strong></p></td>
 
-            <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <td width="213" valign="top"><img src="image/${product.image.id}"> </td>
-            </sec:authorize>
+
+            <td width="213" valign="top"><img src="image/${product.image.id}"> </td>
+
             <sec:authorize access="hasRole('ROLE_ADMIN')">
                 <td width="213" valign="top"><p><strong><a href="update/${product.id}" >Edit</a></strong></td>
             </sec:authorize>
@@ -35,7 +37,7 @@
                 <td width="213" valign="top"><p><strong><a href="delete/${product.id}" >Delete</a></strong></td>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_USER')">
-                <td width="213" valign="top"><p><strong><a href="addToShoppingCart/${product.id}">Select</a></strong></td>
+                <td width="213" valign="top"><p><strong><a href="/shoppingcart/list">Select</a></strong></td>
             </sec:authorize>
         </tr>
     </c:forEach>

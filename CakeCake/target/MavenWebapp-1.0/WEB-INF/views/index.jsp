@@ -1,4 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -46,7 +47,7 @@
                 <li><a href="View-history.jsp">View History</a></li>
 
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <li><a href="product/addProduct1">Add Product</a></li>
+                <li><a href="admin/addProduct">Add Product</a></li>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <li><a href="customer/register">Edit</a></li>
